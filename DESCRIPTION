@@ -7,7 +7,7 @@ Depends: R (>= 3.4.0)
 Imports:
     nimble,tensorflow
 Suggests:
-    testthat
+    microbenchmark,testthat
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 LazyData: true

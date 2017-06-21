@@ -46,7 +46,6 @@ annotateTypes <- function(fun, argTypes, returnType) {
         formals(fun)[[argName]] <- argTypes[[argName]]
     }
     body(fun) <- call('{', call('returnType', returnType), body(fun))
-    browser()
     return(fun)
 }
 
