@@ -2,8 +2,13 @@ supportedBackends <- c('C++', 'Nimble')
 
 # This attempts to determine a NIMBLE type spec from an example value.
 nimTypeOf <- function(value) {
+    value <- eval(value)
     switch(
         class(value),
+        'logical' = call('logical', if (length(value) == 1) 0 else 1),
+        'integer' = call('integer', if (length(value) == 1) 0 else 1),
+        'double' = call('double', if (length(value) == 1) 0 else 1),
+        'character' = call('character', if (length(value) == 1) 0 else 1),
         'numeric' = switch(
             typeof(value),
             'logical' = call('logical', if (length(value) == 1) 0 else 1),
@@ -18,7 +23,6 @@ nimTypeOf <- function(value) {
             'double' = call('double', 2),
             stop(paste('Unsupported type:', typeof(value)))
         ),
-        'character' = call('character', if (length(value) == 1) 0 else 1),
         stop(paste('Unsupported class:', class(value))))
 }
 
