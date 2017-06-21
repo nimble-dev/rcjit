@@ -1,0 +1,11 @@
+Package: rcjit
+Title: Just-in-time compiler for R code
+Version: 0.0.1
+Authors@R: person("Fritz", "Obermeyer", email = "fritz.obermeyer@gmail.com", role = c("aut", "cre"))
+Description: rcjit wraps the NIMBLE package to make it easy to compile R functions to C++ or Tensorflow code.
+Depends: R (>= 3.4.0)
+Imports:
+    nimble,tensorflow
+License: BSD_3_clause + file LICENSE
+Encoding: UTF-8
+LazyData: true
