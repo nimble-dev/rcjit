@@ -22,7 +22,7 @@ print(jit_logistic_map(0.1, 3.6, 1000000))
 
 library(microbenchmark)
 microbenchmark(jit_logistic_map(0.1, 3.6, 1000000),
-               logistic_map(0.1, 3.6, 1000000))
+                   logistic_map(0.1, 3.6, 1000000))
 # Unit: milliseconds
 #                              expr       min        lq      mean    median       uq       max neval
 # jit_logistic_map(0.1, 3.6, 1e+06)  2.472324  2.473969  2.490519  2.476032  2.49078  2.890946   100
