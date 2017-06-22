@@ -1,5 +1,5 @@
 Package: rcjit
-Title: Just-in-time compiler for R code
+Title: Just-in-Time Compiler for R Code
 Version: 0.0.1
 Authors@R: person("Fritz", "Obermeyer", email = "fritz.obermeyer@gmail.com", role = c("aut", "cre"))
 Description: rcjit wraps the NIMBLE package to make it easy to compile R functions to C++ or NIMBLE DSL code.
